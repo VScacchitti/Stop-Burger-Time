@@ -1,0 +1,23 @@
+{
+  "name": "stop-burger-time",
+  "version": "1.0.0",
+  "description": "Burger ORM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VScacchitti/Stop-Burger-Time.git"
+  },
+  "keywords": [
+    "MVC",
+    "ORM"
+  ],
+  "author": "Vince Scacchitti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VScacchitti/Stop-Burger-Time/issues"
+  },
+  "homepage": "https://github.com/VScacchitti/Stop-Burger-Time#readme"
+}
