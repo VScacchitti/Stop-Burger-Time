@@ -10,4 +10,12 @@ $('#form').on("submit", function(event){
         burger_name : $('#inputBurger').val().trim()
     }
     console.log(newBurger)
+
+
+  $.ajax("/", {
+    method : POST,
+    data: newBurger
+}).then(function(){
+    location.reload();
 })
+});
