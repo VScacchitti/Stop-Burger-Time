@@ -35,9 +35,25 @@ const orm = {
 
     },
 
-    updateBurger: function(){
-        
+    updateBurger: function(burgerEaten, itemId){
+
+        const queryString = 'UPDATE burgers SET eaten = (?) WHERE id = (?)';
+
+        return new Promise((resolve, reject)=> {
+            
+            connection.query(queryString, [burgerEaten, itemId], function(err,result){
+
+                if(err){
+                    return reject(err)
+                }
+                console.log(result)
+                return resolve(result)
+            })
+        })
+
     }
 
 
 }
+
+module.exports = orm;
