@@ -1,5 +1,4 @@
 const express = require("express");
-const cat = require("../../Desktop/16-MvcExample/models/cat.js");
 const router = express.router();
 // Import model to use its Database Functions
 const burger = require("../model/burger.js")
