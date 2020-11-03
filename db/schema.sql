@@ -7,7 +7,7 @@ USE burgertime_DB;
 CREATE TABLE burgers (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     burger_name VARCHAR(255) NOT NULL,
-    eat_burger BOOLEAN DEFAULT false
+    eaten BOOLEAN DEFAULT false
 );
 
 SELECT * FROM burgers;

@@ -1,7 +1,8 @@
-const express = require("express");
-const router = express.router();
-// Import model to use its Database Functions
-const burger = require("../model/burger.js")
+const express = require('express');
+const router = express.Router();
+
+// Import the model to use its database functions.
+const burger = require('../model/burger');
 const orm = require('../config/orm')
 
 
@@ -26,7 +27,7 @@ router.post("/", function(req,res){
 router.put("/:id", function(req,res){
     const eatBurger = orm.updateBurger(true, req.params.id)
 
-    eatBurger
+    eatBurger 
       .then(function(){
           res.status(200).end();
       })

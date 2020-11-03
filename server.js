@@ -1,7 +1,7 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 //imports routes from controller
-const routes = require("./controlllers/burger-time-controller");
+const routes = require("./controllers/burgertime_controller.js")
 
 
 //Set up Express app
