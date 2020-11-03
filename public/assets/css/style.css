@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin-bottom: 5rem;
+  background-image: url();
+}
+
+.background-image {
+  background-image: url(http://st2.depositphotos.com/2208212/7832/i/450/depositphotos_78322746-stock-photo-hamburger-pinned-with-knife.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.searchBtn {
+  width: 100%;
+}
+
+.main-h1 {
+  background-color: rgba(0, 45, 45, 0.5);
+}
+
+.jumbotron {
+  padding: 7rem 3rem;
+}
