@@ -1,6 +1,6 @@
 $('#form').on("submit", function(event){
 
-  event,preventDefault();
+  event.preventDefault();
 
   let newBurger = {
     burger_name: $("#inputBurger").val().trim()
@@ -16,7 +16,7 @@ $('#form').on("submit", function(event){
   })
 });
 
-$('eatBurger').on("click", function(){
+$('#eatBurger').on("click", function(){
   const id = $(this).data('id');
   const eaten = $(this).data("eaten")
   console.log(id)
