@@ -2,45 +2,34 @@ const express = require("express");
 const router = express.router();
 // Import model to use its Database Functions
 const burger = require("../model/burger.js")
+const orm = require('../config/orm')
 
 
 
 router.get("/", function (req, res){
-    burger.all(function(data){
-        let hbsObject = {
-            burgers: data
-        };
-        console.log(hbsObject);
-        res.render("index", hbsObject)
-    });
+    const getAllBurgers = orm.selectAll()
+
+    getAllBurgers.then(function(data){
+        res.render('index', {burgers: data})
+    })
 });
 
-router.post("/api/burgers", function(req,res){
-    burger.create(["name", "eaten"], [req.body.name, req.body.eaten], function(result){
-        
-        //send back id of new burger
-        res.json({id: result.insertID });
-    });
+router.post("/", function(req,res){
+  const postBurger = orm.insertBurger(req.body.burger_name);
+
+
+  postBurger.then(function(data){
+      res.json({id: data})
+  })
 });
 
-router.put("/api/burgers/:id", function(req,res){
-    let condition = "id =" + req.params.id;
+router.put("/:id", function(req,res){
+    const eatBurger = orm.updateBurger(true, req.params.id)
 
-    console.log("condition", condition);
-
-
-    burger.update(
-        {
-            eaten: req.body.eaten
-        },
-        condition,
-        function(result){
-            if (result.chnagedRows === 0){
-                return res.status(404).end();
-            }
-            res.status(200).end();
-        }
-    );
+    eatBurger
+      .then(function(){
+          res.status(200).end();
+      })
 });
 
 
