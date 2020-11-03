@@ -17,5 +17,27 @@ const orm = {
         })
     },
 
-    
+    insertBurger: function (burgerName) {
+       const queryString = 'INSERT INTO burgers (burger_name, eaten) VALUES(?,?)';
+
+
+       return new Promime((resolve, reject)=> {
+           connection.query(queryString, [burger_name, false], function(err,result){
+
+            if (err) {
+                return reject(err)
+            }
+
+            console.log(result)
+            return resolve(result)
+           })
+       })
+
+    },
+
+    updateBurger: function(){
+        
+    }
+
+
 }
