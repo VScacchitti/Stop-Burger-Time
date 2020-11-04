@@ -3,8 +3,7 @@
 }
 
 body {
-  margin-bottom: 5rem;
-  background-image: url();
+  margin-bottom: 50px;
 }
 
 .background-image {
@@ -12,16 +11,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 75%;
 }
 
 .searchBtn {
   width: 100%;
-}
-
-.main-h1 {
-  background-color: rgba(0, 45, 45, 0.5);
-}
-
-.jumbotron {
-  padding: 7rem 3rem;
 }
