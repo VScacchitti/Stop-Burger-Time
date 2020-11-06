@@ -35,7 +35,7 @@ const orm = {
 
     },
 
-    updateBurger: function(burgerEaten, itemId){
+    updateBurger: function (burgerEaten, itemId){
 
         const queryString = 'UPDATE burgers SET eaten = (?) WHERE id = (?)';
 
